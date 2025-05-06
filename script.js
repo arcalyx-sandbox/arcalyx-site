@@ -5,7 +5,6 @@ document.addEventListener('mousemove', (e) => {
   quote.style.transform = `translate(${x}px, ${y}px)`;
 });
 
-// Starry background
 const canvas = document.getElementById('bg');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
@@ -15,8 +14,8 @@ let stars = Array.from({length: 100}, () => ({
   x: Math.random() * canvas.width,
   y: Math.random() * canvas.height,
   r: Math.random() * 1.5 + 0.5,
-  dx: (Math.random() - 0.5) * 0.5,
-  dy: (Math.random() - 0.5) * 0.5
+  dx: (Math.random() - 0.5) * 0.1,
+  dy: (Math.random() - 0.5) * 0.1
 }));
 
 function animateStars() {
