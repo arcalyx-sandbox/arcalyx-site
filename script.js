@@ -27,7 +27,7 @@ function animateStars() {
     if (star.y < 0 || star.y > canvas.height) star.dy *= -1;
     ctx.beginPath();
     ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
     ctx.fill();
   }
   requestAnimationFrame(animateStars);
