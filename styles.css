@@ -1,11 +1,12 @@
-body, html {
+* {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  height: 100%;
+  box-sizing: border-box;
+}
+body {
   font-family: 'Patrick Hand', cursive;
-  background: black;
-  color: white;
+  background-color: #111;
+  color: #fff;
 }
 nav {
   position: fixed;
@@ -28,23 +29,65 @@ nav a {
   text-decoration: none;
   font-size: 1.2em;
 }
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hero-bg {
+  width: 100%;
   height: 100vh;
-  text-align: center;
-  z-index: 5;
-  position: relative;
-  padding-top: 60px;
-}
-.hero h1 {
-  font-size: 2.5em;
-  transition: transform 0.1s ease-out;
-}
-canvas {
-  position: fixed;
+  object-fit: cover;
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.hero-text h1 {
+  font-size: 4em;
+}
+.hero-text p {
+  font-size: 2em;
+}
+.cta-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+#about {
+  padding: 50px 20px;
+  text-align: center;
+}
+#about h2 {
+  font-size: 3em;
+}
+.screenshots {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.screenshots img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #222;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
 }
